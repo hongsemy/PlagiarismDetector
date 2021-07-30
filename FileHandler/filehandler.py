@@ -13,9 +13,14 @@ def handle(file: str) -> TextFile:
     """
     try:
         opened_file = open(file, "r")
-        lines_lst = opened_file.readlines()
+        lines_lst = opened_file.read().splitlines()
         opened_file.close()
         text_instance = TextFile(lines_lst)
         return text_instance
     except OSError:
         print("Cannot open: " + file)
+
+
+if __name__ == '__main__':
+    test = handle("../test.txt")
+    print(test.get_all_lines())
