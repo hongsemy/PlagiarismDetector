@@ -1,4 +1,5 @@
 from textfile import TextFile
+from typing import List
 
 
 def handle(file: str) -> TextFile:
@@ -20,6 +21,8 @@ def handle(file: str) -> TextFile:
     except OSError:
         print("Cannot open: " + file)
 
+# def calculate_percentage(file: TextFile, search_res: List[str]):
+    
 
 if __name__ == '__main__':
     test = handle("../test.txt")

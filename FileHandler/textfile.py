@@ -51,10 +51,15 @@ class TextFile:
     def next_line(self) -> None:
         """ Update _curr_line and _curr_ind with the next line in order and its index.
 
-        If the text file contains no contents, this function does not do anything."""
+        If the text file contains no contents, this function does not do anything.
+
+        If the text file reached the last line, it goes back to the first line."""
         curr_ind = self._curr_ind
         if curr_ind is not None:
             curr_ind += 1
+            if curr_ind >= len(self._all_lines):
+                curr_ind = 0
             self._curr_ind = curr_ind
             self._curr_line = self._all_lines[curr_ind]
+
             
