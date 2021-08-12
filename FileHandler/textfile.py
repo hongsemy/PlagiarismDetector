@@ -62,4 +62,3 @@ class TextFile:
             self._curr_ind = curr_ind
             self._curr_line = self._all_lines[curr_ind]
 
-            
