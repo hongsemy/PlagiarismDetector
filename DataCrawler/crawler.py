@@ -114,4 +114,3 @@ if __name__ == "__main__":
     key = input("What to search?: ")
     res = crawl(key)
     print(res)
-
